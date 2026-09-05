@@ -1,0 +1,23 @@
+---
+layout: default
+title: "Research notes"
+description: "Sara Petiton's research notes — ideas and summaries on topics in AI for science."
+body_class: notebook
+---
+
+<section class="hero">
+  <h1>Research notes</h1>
+  <p class="tagline">I created a "research notes" section to share ideas and summaries on topics in AI for science. Posts won't always link directly to my own projects, I just like keeping a running record of subjects I find interesting.</p>
+</section>
+
+<section class="section">
+  <ul class="post-list">
+    {% for post in site.posts %}
+    <li class="post-item">
+      <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %-d, %Y" }}</time>
+      <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+      <p class="excerpt">{{ post.excerpt | strip_html | truncatewords: 28 }}</p>
+    </li>
+    {% endfor %}
+  </ul>
+</section>

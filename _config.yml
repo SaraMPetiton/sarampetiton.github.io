@@ -1,0 +1,34 @@
+title: Sara Petiton
+tagline: "Applied ML for brain imaging & biomarker discovery"
+description: "Personal and research website of Sara Petiton"
+url: "https://github.com/SaraMPetiton/sarampetiton.github.io.git" 
+baseurl: ""                            
+
+author: Sara Petiton
+email: sara.petiton@gmail.com
+
+markdown: kramdown
+permalink: /notebook/:year/:month/:day/:title/
+
+collections:
+  posts:
+    output: true
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+
+plugins:
+  - jekyll-feed
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock

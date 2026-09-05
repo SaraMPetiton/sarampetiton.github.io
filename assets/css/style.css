@@ -1,0 +1,227 @@
+@font-face {
+  font-family: 'Carlito';
+  src: url('../fonts/Carlito-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Carlito';
+  src: url('../fonts/Carlito-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Carlito';
+  src: url('../fonts/Carlito-Italic.woff2') format('woff2');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Carlito';
+  src: url('../fonts/Carlito-BoldItalic.woff2') format('woff2');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+:root {
+  --bg: #f6f7f4;
+  --bg-notebook: #eef4f1;
+  --ink: #1c2321;
+  --muted: #656b64;
+  --accent: #2e6e62;
+  --accent-soft: #d9e9e3;
+  --line: #dcded7;
+  --max: 860px;
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  /* Calibri first for anyone who has it installed (Windows/Office); Carlito is
+     self-hosted below and is metrically identical, so everyone else sees the
+     same look without depending on any external font service. */
+  font-family: Calibri, Carlito, Candara, "Segoe UI", Optima, Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+body.notebook { background: var(--bg-notebook); }
+
+h1, h2, h3 {
+  font-family: Calibri, Carlito, Candara, "Segoe UI", Optima, Arial, sans-serif;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0 0 0.5em;
+  color: var(--ink);
+}
+
+h1 { font-size: 2.15rem; font-weight: 400; }
+h2 { font-size: 1.4rem; margin-top: 2.6em; }
+h3 { font-size: 1.1rem; }
+
+p { margin: 0 0 1.1em; }
+
+a {
+  color: var(--accent);
+  text-decoration-color: var(--accent-soft);
+  text-underline-offset: 3px;
+}
+a:hover { text-decoration-color: var(--accent); }
+a:focus-visible, button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.wrap {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 24px 80px;
+}
+
+/* ---- nav (inner pages only — homepage builds its own header) ---- */
+.site-nav {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 40px 24px 0;
+}
+.site-nav .home-link {
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--ink);
+  text-decoration: none;
+}
+.site-nav .home-link:hover { color: var(--accent); }
+
+/* ---- hero ---- */
+.hero { padding-top: 56px; }
+.hero .tagline {
+  color: var(--muted);
+  font-size: 1.08rem;
+  max-width: 640px;
+}
+.hero-grid {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 36px;
+  align-items: flex-start;
+}
+.hero-text { flex: 1 1 auto; min-width: 0; }
+.hero-photo { flex: 0 0 220px; }
+.hero-photo img {
+  width: 220px;
+  height: 275px;
+  object-fit: cover;
+  display: block;
+}
+
+/* ---- frieze: CV / Email / LinkedIn / Google Scholar / Research notes ---- */
+.frieze {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 26px;
+  padding-top: 22px;
+  border-top: 1px solid var(--line);
+}
+.frieze a {
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 0.92rem;
+  padding: 7px 16px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: #fff;
+  transition: background 150ms ease, border-color 150ms ease, color 150ms ease;
+}
+.frieze a:hover {
+  background: var(--accent-soft);
+  border-color: var(--accent);
+}
+
+/* ---- sections ---- */
+.section { border-top: 1px solid var(--line); padding-top: 4px; }
+
+/* ---- publications ---- */
+.pub-list { list-style: none; margin: 0; padding: 0; }
+.pub-item {
+  padding: 22px 0;
+  border-bottom: 1px solid var(--line);
+}
+.pub-item:last-child { border-bottom: none; }
+.pub-title { font-weight: 700; margin: 0 0 4px; }
+.pub-meta {
+  color: var(--muted);
+  font-size: 0.92rem;
+  margin: 0 0 8px;
+}
+.pub-desc { margin: 0 0 8px; color: var(--ink); }
+.pub-links a { margin-right: 16px; font-size: 0.95rem; }
+.pub-todo {
+  display: inline-block;
+  margin-top: 4px;
+  font-size: 0.82rem;
+  color: #a06b1f;
+  background: #f7ecd8;
+  padding: 2px 8px;
+  border-radius: 3px;
+}
+
+/* ---- research notes teaser & index ---- */
+.notebook-teaser {
+  background: var(--accent-soft);
+  border-radius: 6px;
+  padding: 24px 26px;
+  margin-top: 8px;
+}
+.notebook-teaser h2 { margin-top: 0; }
+
+.post-list { list-style: none; margin: 0; padding: 0; }
+.post-item { padding: 20px 0; border-bottom: 1px solid var(--line); }
+.post-item:last-child { border-bottom: none; }
+.post-item time {
+  display: block;
+  color: var(--muted);
+  font-size: 0.88rem;
+  margin-bottom: 4px;
+}
+.post-item h3 { margin: 0 0 6px; }
+.post-item h3 a { text-decoration: none; color: var(--ink); }
+.post-item h3 a:hover { color: var(--accent); }
+.post-item .excerpt { color: var(--muted); margin: 0; }
+
+/* ---- single post ---- */
+.post-header { margin-bottom: 8px; }
+.post-header time { color: var(--muted); font-size: 0.92rem; }
+.post-content h2 { font-size: 1.25rem; }
+.post-content img { max-width: 100%; }
+.back-link { display: inline-block; margin-bottom: 32px; font-size: 0.95rem; }
+
+/* ---- footer ---- */
+footer.site-footer {
+  max-width: var(--max);
+  margin: 40px auto 0;
+  padding: 24px 24px 60px;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+@media (max-width: 640px) {
+  .hero-grid { flex-wrap: wrap-reverse; }
+  .hero-text { flex-basis: 100%; }
+  .hero-photo, .hero-photo img { width: 160px; height: 200px; }
+}
+
+@media (max-width: 480px) {
+  body { font-size: 16px; }
+  h1 { font-size: 1.7rem; }
+  .site-nav { padding-top: 28px; }
+}
