@@ -65,8 +65,17 @@ h1, h2, h3 {
 }
 
 h1 { font-size: 2.15rem; font-weight: 400; }
-h2 { font-size: 1.4rem; margin-top: 2.6em; }
+h2 { font-size: 1.7rem; margin-top: 2.6em; color: var(--accent); }
 h3 { font-size: 1.1rem; }
+
+h2::before {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 3px;
+  background: var(--accent);
+  margin-bottom: 12px;
+}
 
 p { margin: 0 0 1.1em; }
 
@@ -137,8 +146,8 @@ a:focus-visible, button:focus-visible {
   flex: 0 0 auto;
   color: var(--accent);
   text-decoration: none;
-  font-size: 0.88rem;
-  padding: 6px 13px;
+  font-size: 1.02rem;
+  padding: 10px 20px;
   border: 1px solid var(--line);
   border-radius: 999px;
   background: #fff;
