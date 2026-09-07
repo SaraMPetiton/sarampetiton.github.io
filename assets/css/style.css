@@ -127,6 +127,7 @@ a:focus-visible, button:focus-visible {
 .frieze {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
   gap: 8px;
   margin-top: 26px;
   padding-top: 22px;
