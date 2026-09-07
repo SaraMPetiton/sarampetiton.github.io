@@ -140,6 +140,7 @@ a:focus-visible, button:focus-visible {
   gap: 8px;
   margin-top: 26px;
   padding-top: 22px;
+  padding-bottom: 22px;
   border-top: 1px solid var(--line);
 }
 .frieze a {
