@@ -34,10 +34,11 @@ description: "Sara Petiton — machine learning for neuroimaging and biomarker d
 
       <div class="frieze">
         <a href="{{ '/assets/files/cv.pdf' | relative_url }}" target="_blank" rel="noopener">CV</a>
-        <a href="mailto:sara.petiton@gmail.com">Email</a>
-        <a href="https://www.linkedin.com/in/sara-petiton-a666b9128/">LinkedIn</a>
-        <a href="https://scholar.google.com/citations?user=Exza6UcAAAAJ&hl=fr">Google Scholar</a>
-        <a href="{{ '/notebook/' | relative_url }}">Research notes</a>
+        <a href="mailto:sara.petiton@gmail.com" target="_blank" rel="noopener">Email</a>
+        <a href="https://www.linkedin.com/in/sara-petiton-a666b9128/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://scholar.google.com/citations?user=Exza6UcAAAAJ&hl=fr" target="_blank" rel="noopener">Google Scholar</a>
+        <a href="https://orcid.org/0009-0001-7680-3542" target="_blank" rel="noopener">ORCID</a>
+        <a href="{{ '/notebook/' | relative_url }}" target="_blank" rel="noopener">Research notes</a>
       </div>
     </div>
     <div class="hero-photo">
@@ -46,58 +47,81 @@ description: "Sara Petiton — machine learning for neuroimaging and biomarker d
   </div>
 </section>
 
-<!-- <section class="section" id="publications">
+<section class="section" id="publications">
   <h2>Publications</h2>
   <ul class="pub-list">
 
     <li class="pub-item">
-      <p class="pub-title">Contrastive learning with continuous proxy meta-data for 3D MRI classification</p>
-      <p class="pub-meta">Dufumier et al. · NeuroImage, 2024</p>
-      <p class="pub-desc">Co-authored work on contrastive pretraining for voxel-based morphometry data, using continuous meta-data as a proxy signal.</p>
-      <p class="pub-links"><a href="#">Paper</a></p>
-      <span class="pub-todo">add exact link</span>
+      <p class="pub-title">Exploring the potential of representation and transfer learning for anatomical neuroimaging: 
+        Application to psychiatry</p>
+      <p class="pub-meta">Dufumier B, Gori P, <strong>Petiton S</strong>, Louiset R, Mangin JF, Grigis A, Duchesnay E. · NeuroImage, 2024</p>
+      <p class="pub-desc">Work demonstrating improved deep learning classification of psychiatric illness vs. healthy neuroanatomy 
+        when dealing with small psychiatric datasets and whole-brain, voxel-wise anatomical MRI as input features. 
+        This is achieved using transfer learning with a contrastive model pretrained on a large cohort of healthy controls using age as a proxy signal.</p>
+      <p class="pub-links"><a href="https://pubmed.ncbi.nlm.nih.gov/38848981/" target="_blank" rel="noopener">Paper</a></p>
     </li>
 
     <li class="pub-item">
-      <p class="pub-title">[Add exact title]</p>
-      <p class="pub-meta">Sara Petiton et al. · ISBI, [year]</p>
-      <p class="pub-desc">First-author conference paper — add a one-line description of the question and approach.</p>
-      <p class="pub-links"><a href="#">Paper</a></p>
-      <span class="pub-todo">fill in title, year, link</span>
+      <p class="pub-title">How and why does deep ensemble coupled with transfer learning increase performance in bipolar disorder 
+        and schizophrenia classification?</p>
+      <p class="pub-meta"> <strong>Petiton S</strong>, Grigis A, Dufumier B, Duchesnay E. · IEEE International Symposium on Biomedical Imaging (ISBI), 2024</p>
+      <p class="pub-desc"> Conference paper demonstrating that deep learning models for psychiatric classification using transfer learning, 
+        initialized with the same pretraining weights from a model trained on healthy controls, outperform randomly initialized models and offer greater 
+        reproducibility because their loss stays within the same basin of the loss landscape. Additionally, we benchmarked deep ensembles to determine 
+        the exact number of models needed to achieve the optimal tradeoff between model count, performance gains, and uncertainty minimization.</p>
+      <p class="pub-links"><a href="https://arxiv.org/abs/2604.02002" target="_blank" rel="noopener">Paper</a></p>
     </li>
 
     <li class="pub-item">
-      <p class="pub-title">Predicting bipolar disorder from brain MRI across 12 sites with spherical CNNs and deep ensembles</p>
-      <p class="pub-meta">Sara Petiton et al. · Preprint</p>
-      <p class="pub-desc">Multi-site bipolar disorder prediction using spherical CNNs and deep ensembles with uncertainty quantification, validated with leave-one-site-out cross-validation.</p>
-      <p class="pub-links"><a href="#">Preprint</a></p>
-      <span class="pub-todo">add exact title, venue/year, link</span>
+      <p class="pub-title">Surface and Voxel-based Brain Morphometric Representations are Synergistic for Individual-Level Prediction of Bipolar Disorder</p>
+      <p class="pub-meta"><strong>Petiton S</strong>, Grigis A, Dufumier B, Wessa M, Brambilla P, Polosan M, McDonald C, Piguet C, 
+        Phillips ML, Eyler L, Chavas J, Frouin V, Houenou J, Favre P, Laidi C, Bourgin J, Duchesnay E. · Preprint, under review</p>
+      <p class="pub-desc">While model choice is widely examined in neuroimaging classification, feature representations are rarely
+        analyzed despite different morphometries capturing distinct neuroanatomical properties. In this paper, we compared performance and uncertainties across 
+        machine learning and deep learning models using voxel-based (VBM) and surface-based morphometric (SBM) features at the voxel, vertex, 
+        and region of interest levels. Classifying bipolar disorder vs. healthy controls across a 763-subject multisite dataset using 
+        leave-one-site-out cross-validation, we found that VBM features consistently outperform SBM features regardless of model type.
+        Moreover, combining both morphometries across granularities yields synergistic gains: our combined model reached 76.76% ROC-AUC, 
+        an average 5.20% ROC-AUC improvement over the best single-feature classifiers, while also increasing robustness. </p> 
+      <p class="pub-links"><a href="https://hal.science/hal-05571683/" target="_blank" rel="noopener">Preprint</a></p>
     </li>
 
     <li class="pub-item">
-      <p class="pub-title">Surface- and voxel-based morphometric representations for individual-level prediction of bipolar disorder</p>
-      <p class="pub-meta">Sara Petiton et al. · Preprint</p>
-      <p class="pub-desc">Comparing surface-based and voxel-based morphometric representations of structural MRI for individual-level classification.</p>
-      <p class="pub-links"><a href="#">Preprint</a></p>
-      <span class="pub-todo">add exact title, venue/year, link</span>
+      <p class="pub-title">Improving clinical interpretability of linear neuroimaging models through feature whitening</p>
+      <p class="pub-meta"><strong>Petiton S</strong>, Grigis A, Vock R, Duchesnay E. · arXiv preprint</p>
+      <p class="pub-desc">This work proposes a whitening approach for linear neuroimaging classifiers that addresses a specific interpretability problem. 
+        While linear models are often regarded as the most interpretable machine learning models, strong correlations or collinearity in the input features
+        can skew model weights, and obscure which regions are truly driving the predictions. In neuroimaging data, features are often highly correlated, 
+        especially homologous left and right hemisphere structures, causing linear model weights to reflect shared rather than 
+        region-specific contributions. By decorrelating anatomically informed pairs of regions while retaining the full input signal, unlike PCA or ICA 
+        which use whitening for dimensionality reduction, the method highlights which individual regions drive a prediction without changing model accuracy. 
+        This approach was evaluated on bipolar disorder and schizophrenia classification from ROI-based features, with model weights validated against 
+        ENIGMA meta-analytic findings. </p>
+      <p class="pub-links"><a href="https://arxiv.org/abs/2604.20675" target="_blank" rel="noopener">arXiv</a></p>
     </li>
 
     <li class="pub-item">
-      <p class="pub-title">Improving the clinical interpretability of linear neuroimaging models through feature whitening</p>
-      <p class="pub-meta">Sara Petiton et al. · arXiv preprint</p>
-      <p class="pub-desc">A feature-whitening approach for making linear models on neuroimaging data more interpretable to clinicians.</p>
-      <p class="pub-links"><a href="#">arXiv</a></p>
-      <span class="pub-todo">add exact link</span>
-    </li>
-
-    <li class="pub-item">
-      <p class="pub-title">Lithium treatment response in bipolar disorder via normative brain charts</p>
-      <p class="pub-meta">Sara Petiton et al. · In preparation</p>
+      <p class="pub-title">Hippocampal and Amygdalar Atrophy Predict Lithium Response in Bipolar Disorder: 
+        Machine Learning Evidence from the R-LiNK Prospective Multi-Site Cohort</p>
+      <p class="pub-meta"><strong>Petiton S</strong>, Bourgin J, Brambilla P, Andreassen O, Bauer M, Bayas M, Boumezbeur F, Bourdon C, Cattaneo A, 
+        Chupin M, Colom F, Cousins D, Dubertret C, Dufumier B, Dupont T, Etain B, Favre P, Fico G, Grigis A, Haffen E, Hennion V, Houenou J, Kobayashi N, 
+        Laidi C, Lambert J, Landen M, Marie-Claire C, Mombelli E, Nuß I, Oedegaard KJ, Oltedal L, Reif A, Resche-Rigon M, Rossi R, Schulze T, Squarcina L, 
+        Thelwall P, Tønning M, Kessing LV, Vieta E, Vinberg M, Young A, Bellivier F, Duchesnay E.· Preprint, under review</p>
       <p class="pub-desc">Using normative brain charts to characterize treatment response to lithium in bipolar disorder.</p>
+      <p class="pub-desc">Part of the <a href="https://www.inserm-transfert.fr/projetcollaboratif/r-link/" target="_blank" rel="noopener">R-LiNK European project</a>,
+         this work showed that hippocampus and amygdalar atrophy to be predictive of positive treatment response to lithium in bipolar disorder.
+         Using structural MRI from 116 patients prior to treatment, a linear regularized classifier predicted response with a ROC-AUC of 0.69, with the hippocampus
+          and amygdala alone reaching 0.67 and 0.64 respectively. Extensive feature importance analyses of the model showed these two regions to be 
+          specific predictors of response. Normative modeling against a healthy reference sample of over 50,000 participants showed that good responders 
+          deviated more from typical neuroanatomy at baseline in these regions than partial or non-responders. Lithium increased gray matter volume brain-wide 
+          across all patients regardless of response, and because good responders started out more atrophied, this increase brought
+          their hippocampal and amygdalar volumes closer to normative levels.
+          Effects were consistently stronger in males than in females, suggesting a sex-dependent component to lithium's mechanism of action.</p>
+      <p class="pub-links"><a href="https://inserm.hal.science/inserm-05588008" target="_blank" rel="noopener">arXiv</a></p>
     </li>
 
   </ul>
-</section> -->
+</section>
 
 <section class="section">
   <div class="notebook-teaser">
@@ -107,7 +131,7 @@ description: "Sara Petiton — machine learning for neuroimaging and biomarker d
       for science. Posts aren't always directly related to my own projects, I just like
       keeping a running record of subjects I find interesting.
     </p>
-    <p><a href="{{ '/notebook/' | relative_url }}">Read the research notes &rarr;</a></p>
+    <p><a href="{{ '/notebook/' | relative_url }}" target="_blank" rel="noopener">Read the research notes &rarr;</a></p>
   </div>
 </section>
 
